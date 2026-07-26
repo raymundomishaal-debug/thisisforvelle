@@ -1,0 +1,1063 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>For Velle, Future RN ❤️</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,500;0,600;0,700;1,500;1,600&family=Quicksand:wght@400;500;600;700&family=Caveat:wght@500;600;700&display=swap" rel="stylesheet">
+<style>
+  :root{
+    --pink: #FFD6E8;
+    --blush: #FFC1D6;
+    --white: #FFFFFF;
+    --cream: #FFF8F1;
+    --lavender: #EAE0F6;
+    --peach: #FFE2C6;
+    --gold: #E8C889;
+    --ink: #5B4A4A;
+    --ink-soft: #8A7573;
+    --ink-faint: #B9A8A6;
+    --shadow: 0 10px 30px rgba(180,120,140,0.14);
+    --shadow-soft: 0 6px 18px rgba(180,120,140,0.10);
+    --radius: 28px;
+  }
+
+  *{box-sizing:border-box;}
+  html{scroll-behavior:smooth;}
+  body{
+    margin:0;
+    font-family:'Quicksand', sans-serif;
+    color:var(--ink);
+    background:
+      radial-gradient(circle at 15% 10%, rgba(255,214,232,0.55), transparent 40%),
+      radial-gradient(circle at 85% 30%, rgba(234,224,246,0.5), transparent 45%),
+      radial-gradient(circle at 50% 90%, rgba(255,226,198,0.45), transparent 45%),
+      var(--cream);
+    overflow-x:hidden;
+  }
+
+  @media (prefers-reduced-motion: reduce){
+    *{animation-duration:0.001ms !important; animation-iteration-count:1 !important; transition-duration:0.001ms !important; scroll-behavior:auto !important;}
+  }
+
+  h1,h2,h3{
+    font-family:'Playfair Display', serif;
+    font-weight:600;
+    margin:0;
+  }
+
+  .script{
+    font-family:'Caveat', cursive;
+  }
+
+  section{
+    position:relative;
+    padding:110px 24px;
+    max-width:900px;
+    margin:0 auto;
+  }
+
+  .eyebrow{
+    font-family:'Quicksand', sans-serif;
+    letter-spacing:0.22em;
+    text-transform:uppercase;
+    font-size:0.72rem;
+    color:var(--ink-soft);
+    display:flex;
+    align-items:center;
+    justify-content:center;
+    gap:10px;
+    margin-bottom:18px;
+  }
+  .eyebrow::before, .eyebrow::after{
+    content:"";
+    width:28px;
+    height:1px;
+    background:var(--blush);
+  }
+
+  /* ---------- floating hearts background ---------- */
+  .floaties{
+    position:fixed;
+    inset:0;
+    pointer-events:none;
+    overflow:hidden;
+    z-index:0;
+  }
+  .floaty{
+    position:absolute;
+    bottom:-10%;
+    opacity:0.5;
+    animation:rise linear infinite;
+    color:var(--blush);
+  }
+  @keyframes rise{
+    0%{ transform:translateY(0) translateX(0) rotate(0deg); opacity:0; }
+    10%{ opacity:0.55; }
+    90%{ opacity:0.4; }
+    100%{ transform:translateY(-115vh) translateX(20px) rotate(20deg); opacity:0; }
+  }
+
+  /* ---------- nav dots ---------- */
+  .dots{
+    position:fixed;
+    right:22px; 
+    top:50%;
+    transform:translateY(-50%);
+    z-index:50;
+    display:flex;
+    flex-direction:column;
+    gap:14px;
+  }
+  .dots a{
+    width:9px;
+    height:9px;
+    border-radius:50%;
+    background:rgba(180,120,140,0.25);
+    display:block;
+    transition:all .3s ease;
+  }
+  .dots a.active{
+    background:var(--blush);
+    transform:scale(1.4);
+  }
+  @media (max-width:720px){ .dots{display:none;} }
+
+  /* ================= WELCOME ================= */
+  .welcome{
+    min-height:100vh;
+    display:flex;
+    flex-direction:column;
+    align-items:center;
+    justify-content:center;
+    text-align:center;
+    padding-top:70px;
+    padding-bottom:70px;
+  }
+  .photo-frame{
+    width:300px;
+    height: 300px;;
+    border-radius:50%;
+    background:linear-gradient(160deg, var(--pink), var(--peach));
+    display:flex;
+    align-items:center;
+    justify-content:center;
+    box-shadow:var(--shadow);
+    border:6px solid var(--white);
+    margin-bottom:30px;
+    position:relative;
+    animation:float 6s ease-in-out infinite;
+  }
+  @keyframes float{
+    0%,100%{ transform:translateY(0); }
+    50%{ transform:translateY(-10px); }
+  }
+  .photo-frame span{
+    font-family:'Playfair Display', serif;
+    font-size:3.2rem;
+    color:var(--white);
+    font-weight:600;
+  }
+  .photo-frame img{
+    width:100%;
+    height:100%;
+    object-fit:cover;
+    border-radius:50%;
+    display:block;
+  }
+  .photo-frame .sparkle{
+    position:absolute;
+    font-size:1.2rem;
+  }
+  .photo-frame .sparkle.s1{ top:-6px; right:6px; animation:twinkle 1.4s ease-in-out infinite; }
+  .photo-frame .sparkle.s2{ bottom:2px; left:-10px; animation:twinkle 1.4s ease-in-out infinite 1s; }
+  @keyframes twinkle{
+    0%,100%{ opacity:0.2; transform:scale(0.8); }
+    50%{ opacity:1; transform:scale(1.1); }
+  }
+
+  .welcome h1{
+    font-size:clamp(2.1rem, 5vw, 3.2rem);
+    color:var(--ink);
+  }
+  .welcome .sub{
+    max-width:480px;
+    margin:22px auto 8px;
+    font-size:1.08rem;
+    line-height:1.7;
+    color:var(--ink-soft);
+  }
+
+  .rotator{
+    margin-top:38px;
+    min-height:60px;
+    display:flex;
+    align-items:center;
+    justify-content:center;
+  }
+  .rotator span{
+    font-family:'Playfair Display', serif;
+    font-style:italic;
+    font-size:1.4rem;
+    color:#B0688A;
+    opacity:0;
+    animation:fadeSwap 4s ease-in-out infinite;
+  }
+  @keyframes fadeSwap{
+    0%{ opacity:0; transform:translateY(6px); }
+    10%{ opacity:1; transform:translateY(0); }
+    85%{ opacity:1; }
+    100%{ opacity:0; transform:translateY(-6px); }
+  }
+
+  .scroll-hint{
+    margin-top:56px;
+    font-size:0.75rem;
+    letter-spacing:0.2em;
+    text-transform:uppercase;
+    color:var(--ink-faint);
+    display:flex;
+    flex-direction:column;
+    align-items:center;
+    gap:8px;
+  }
+  .scroll-hint::after{
+    content:"";
+    width:1px;
+    height:34px;
+    background:linear-gradient(var(--blush), transparent);
+    animation:pulseLine 2s ease-in-out infinite;
+  }
+  @keyframes pulseLine{
+    0%,100%{ opacity:0.3; }
+    50%{ opacity:1; }
+  }
+
+  /* ================= CARD (shared) ================= */
+  .card{
+    background:var(--white);
+    border-radius:var(--radius);
+    box-shadow:var(--shadow);
+    padding:52px 44px;
+    text-align:center;
+    position:relative;
+  }
+  @media (max-width:600px){
+    .card{ padding:38px 24px; }
+  }
+
+  .headline{
+    text-align:center;
+    margin-bottom:50px;
+  }
+  .headline h2{
+    font-size:clamp(1.7rem, 4vw, 2.3rem);
+  }
+  .headline p{
+    color:var(--ink-soft);
+    margin-top:10px;
+    font-size:1rem;
+  }
+
+  /* ================= ENCOURAGEMENT ================= */
+  .encourage-card{
+    background:linear-gradient(160deg, #FFFFFF, #FFF3F8);
+  }
+  .quote-mark{
+    font-family:'Playfair Display', serif;
+    font-size:3rem;
+    color:var(--pink);
+    line-height:1;
+    margin-bottom:8px;
+  }
+  #encourage-text{
+    font-family:'Playfair Display', serif;
+    font-size:clamp(1.3rem, 3vw, 1.7rem);
+    line-height:1.55;
+    color:var(--ink);
+    min-height:110px;
+    display:flex;
+    align-items:center;
+    justify-content:center;
+    transition:opacity .35s ease;
+  }
+  .btn{
+    font-family:'Quicksand', sans-serif;
+    font-weight:600;
+    font-size:0.95rem;
+    border:none;
+    cursor:pointer;
+    padding:15px 32px;
+    border-radius:40px;
+    background:linear-gradient(120deg, var(--blush), var(--pink));
+    color:#7A3B57;
+    box-shadow:var(--shadow-soft);
+    transition:transform .2s ease, box-shadow .2s ease;
+    margin-top:8px;
+  }
+  .btn:hover{
+    transform:translateY(-2px);
+    box-shadow:0 12px 24px rgba(180,120,140,0.22);
+  }
+  .btn:focus-visible{
+    outline:3px solid var(--gold);
+    outline-offset:3px;
+  }
+  .btn-alt{
+    background:linear-gradient(120deg, var(--lavender), #F6EEFB);
+    color:#6B5490;
+  }
+  .btn-ghost{
+    background:transparent;
+    border:1.5px solid var(--blush);
+    color:#B0688A;
+    box-shadow:none;
+  }
+
+  /* ================= VERSE ================= */
+  .verse-card{
+    background:linear-gradient(160deg, #FFFFFF, #F3EEFA);
+    max-width:640px;
+    margin:0 auto;
+  }
+  .verse-ref{
+    font-family:'Quicksand', sans-serif;
+    font-weight:700;
+    letter-spacing:0.08em;
+    text-transform:uppercase;
+    font-size:0.78rem;
+    color:#8A6BB0;
+    margin-bottom:16px;
+  }
+  #verse-text{
+    font-family:'Playfair Display', serif;
+    font-style:italic;
+    font-size:clamp(1.15rem, 3vw, 1.45rem);
+    line-height:1.6;
+    color:var(--ink);
+    min-height:100px;
+  }
+  #verse-reflection{
+    margin-top:22px;
+    padding-top:22px;
+    border-top:1px solid #EEE1F5;
+    font-size:0.98rem;
+    color:var(--ink-soft);
+    line-height:1.7;
+  }
+
+  /* ================= LETTER ================= */
+  .letter-section{
+    text-align:center;
+  }
+  .envelope-wrap{
+    display:flex;
+    flex-direction:column;
+    align-items:center;
+    gap:22px;
+  }
+  .envelope{
+    width:min(340px, 80vw);
+    height:220px;
+    position:relative;
+    cursor:pointer;
+    filter:drop-shadow(0 14px 26px rgba(180,120,140,0.25));
+    transition:transform .3s ease;
+  }
+  .envelope:hover{ transform:translateY(-4px); }
+  .env-body{
+    position:absolute;
+    inset:0;
+    background:linear-gradient(160deg, #FFFFFF, #FFEFF4);
+    border-radius:14px;
+    border:1px solid #FBDCE7;
+  }
+  .env-flap{
+    position:absolute;
+    top:0; left:0; right:0;
+    height:0;
+    border-left:170px solid transparent;
+    border-right:170px solid transparent;
+    border-top:110px solid #FFD9E8;
+    transform-origin:top;
+    transition:transform .8s cubic-bezier(.6,-0.2,.3,1.3);
+    z-index:3;
+  }
+  .envelope.open .env-flap{
+    transform:rotateX(180deg);
+  }
+  .seal{
+    position:absolute;
+    top:78px;
+    left:50%;
+    transform:translateX(-50%);
+    width:52px;
+    height:52px;
+    border-radius:50%;
+    background:radial-gradient(circle at 35% 30%, #E7B4C9, #C9647F);
+    display:flex;
+    align-items:center;
+    justify-content:center;
+    font-family:'Playfair Display', serif;
+    color:#fff;
+    font-size:1.3rem;
+    box-shadow:0 4px 10px rgba(150,60,90,0.35);
+    z-index:4;
+    transition:opacity .3s ease, transform .3s ease;
+  }
+  .envelope.open .seal{
+    opacity:0;
+    transform:translateX(-50%) scale(0.4);
+  }
+  .paper{
+    position:absolute;
+    left:8%;
+    right:8%;
+    bottom:14px;
+    height:60%;
+    background:var(--white);
+    border-radius:8px;
+    box-shadow:0 -2px 6px rgba(0,0,0,0.05);
+    z-index:2;
+    transition:transform .7s cubic-bezier(.2,.7,.3,1), height .7s ease;
+  }
+  .envelope.open .paper{
+    transform:translateY(-160px) scale(1.02);
+  }
+  .envelope-caption{
+    color:var(--ink-soft);
+    font-style:italic;
+    font-size:0.98rem;
+  }
+  .tap-hint{
+    font-size:0.78rem;
+    letter-spacing:0.15em;
+    text-transform:uppercase;
+    color:var(--ink-faint);
+  }
+
+  .letter-paper{
+    max-width:640px;
+    margin:50px auto 0;
+    background:
+      linear-gradient(#00000000, #00000000);
+    background-color:#FFFDF7;
+    background-image: repeating-linear-gradient(#FFFDF7 0px, #FFFDF7 34px, #F6E9D7 35px);
+    border-radius:6px;
+    box-shadow:var(--shadow);
+    padding:52px 40px;
+    text-align:left;
+    font-family:'Caveat', cursive;
+    font-size:1.5rem;
+    line-height:35px;
+    color:#5B4636;
+    display:none;
+  }
+  .letter-paper.visible{ display:block; }
+  .letter-line{
+    opacity:0;
+    transform:translateY(6px);
+    transition:opacity .5s ease, transform .5s ease;
+  }
+  .letter-line.show{ opacity:1; transform:translateY(0); }
+  .letter-sig{
+    margin-top:10px;
+    font-size:1.7rem;
+    color:#B0688A;
+  }
+
+  /* ================= MEMORIES ================= */
+  .gallery{
+    display:grid;
+    grid-template-columns:repeat(3, 1fr);
+    gap:26px;
+  }
+  @media (max-width:640px){
+    .gallery{ grid-template-columns:repeat(2, 1fr); }
+  }
+  .polaroid{
+    background:var(--white);
+    padding:12px 12px 34px;
+    border-radius:6px;
+    box-shadow:var(--shadow-soft);
+    transform:rotate(var(--tilt));
+    transition:transform .3s ease, box-shadow .3s ease;
+    position:relative;
+    cursor:default;
+  }
+  .polaroid:hover{
+    transform:rotate(0deg) translateY(-8px);
+    box-shadow:var(--shadow);
+    z-index:5;
+  }
+  .polaroid .thumb{
+    width:100%;
+    aspect-ratio:1/1;
+    border-radius:3px;
+    background:linear-gradient(150deg, var(--pink), var(--lavender));
+    display:flex;
+    align-items:center;
+    justify-content:center;
+    font-size:1.8rem;
+    overflow:hidden;
+  }
+  .polaroid .thumb img{
+    width:100%;
+    height:100%;
+    object-fit:cover;
+    display:block;
+  }
+  .polaroid .caption{
+    position:absolute;
+    bottom:8px;
+    left:0;
+    right:0;
+    text-align:center;
+    font-family:'Caveat', cursive;
+    font-size:1.15rem;
+    color:#8A6B6B;
+    opacity:0;
+    transition:opacity .3s ease;
+  }
+  .polaroid:hover .caption, .polaroid.tapped .caption{ opacity:1; }
+
+  /* ================= CHECK-IN ================= */
+  .checkin-card{
+    max-width:520px;
+    margin:0 auto;
+    background:linear-gradient(160deg, #FFFFFF, #FFF6EE);
+  }
+  .checklist{
+    display:flex;
+    flex-direction:column;
+    gap:14px;
+    text-align:left;
+    margin-top:8px;
+  }
+  .checklist label{
+    display:flex;
+    align-items:center;
+    gap:14px;
+    font-size:1.02rem;
+    color:var(--ink);
+    background:var(--cream);
+    padding:14px 18px;
+    border-radius:16px;
+    cursor:pointer;
+    transition:background .25s ease;
+  }
+  .checklist label:has(input:checked){
+    background:#FBE8EF;
+  }
+  .checklist input{
+    width:19px;
+    height:19px;
+    accent-color:#C9647F;
+  }
+  #checkin-message{
+    margin-top:26px;
+    font-family:'Playfair Display', serif;
+    font-style:italic;
+    color:#B0688A;
+    font-size:1.15rem;
+    min-height:1.6em;
+    opacity:0;
+    transition:opacity .5s ease;
+  }
+  #checkin-message.show{ opacity:1; }
+
+  /* ================= CLOSING ================= */
+  .closing{
+    text-align:center;
+    padding-bottom:140px;
+  }
+  .closing p{
+    font-family:'Playfair Display', serif;
+    font-style:italic;
+    font-size:clamp(1.1rem, 2.6vw, 1.35rem);
+    line-height:1.9;
+    color:var(--ink);
+    max-width:620px;
+    margin:0 auto 14px;
+  }
+  .closing .sig{
+    margin-top:40px;
+    font-family:'Caveat', cursive;
+    font-size:2.6rem;
+    color:#B0688A;
+  }
+  .closing .small-heart{
+    margin-top:60px;
+    font-size:0.78rem;
+    letter-spacing:0.2em;
+    text-transform:uppercase;
+    color:var(--ink-faint);
+  }
+</style>
+</head>
+<body>
+
+<div class="floaties" id="floaties"></div>
+
+<nav class="dots" id="dots">
+  <a href="#welcome" data-label="Welcome"></a>
+  <a href="#encouragement" data-label="Encouragement"></a>
+  <a href="#verse" data-label="Verse"></a>
+  <a href="#letter" data-label="Letter"></a>
+  <a href="#memories" data-label="Memories"></a>
+  <a href="#checkin" data-label="Check-in"></a>
+  <a href="#closing" data-label="Closing"></a>
+</nav>
+
+<!-- ================= WELCOME ================= -->
+<section class="welcome" id="welcome">
+  <div class="photo-frame">
+    <img src="images/velle.jpeg" alt="Velle Sammer F. Sapongay">
+    <span class="sparkle s1">✦</span>
+    <span class="sparkle s2">✦</span>
+  </div>
+  <h1>Hi, Velle Sammer F. Sapongay <span aria-hidden="true">❤️</span></h1>
+  <p class="sub">Before you start studying today, I just want you to remember something...</p>
+  <div class="rotator">
+    <span id="rotator-text">One page at a time.</span>
+  </div>
+  <div class="scroll-hint">scroll gently</div>
+</section>
+
+<!-- ================= ENCOURAGEMENT ================= -->
+<section id="encouragement">
+  <div class="headline">
+    <div class="eyebrow">for today</div>
+    <h2>Daily Encouragement</h2>
+    <p>A little note, whenever you need one.</p>
+  </div>
+  <div class="card encourage-card">
+    <div class="quote-mark" aria-hidden="true">“</div>
+    <p id="encourage-text">Every page you study today brings you closer to your dream.</p>
+    <button class="btn" id="encourage-btn">🌸 Another Note From Mishaal</button>
+  </div>
+</section>
+
+<!-- ================= VERSE ================= -->
+<section id="verse">
+  <div class="headline">
+    <div class="eyebrow">today's bible verse</div>
+    <h2>A Little Light For the Day</h2>
+  </div>
+  <div class="card verse-card">
+    <div class="verse-ref" id="verse-ref">Jeremiah 29:11</div>
+    <p id="verse-text">"For I know the plans I have for you," declares the Lord, "plans to prosper you and not to harm you, plans to give you hope and a future."</p>
+    <p id="verse-reflection">Nursing school can make the future feel uncertain, but you were never meant to carry that uncertainty alone. There is a plan for you, even on the days it's hard to see it. Every skill you're learning now is quietly shaping the compassionate nurse you're becoming.</p>
+    <button class="btn btn-alt" id="verse-btn">Another Verse</button>
+  </div>
+</section>
+
+<!-- ================= LETTER ================= -->
+<section id="letter" class="letter-section">
+  <div class="headline">
+    <div class="eyebrow"></div>
+    <h2>A Letter For You</h2>
+    <p>Open this for a special message.</p>
+  </div>
+  <div class="envelope-wrap">
+    <div class="envelope" id="envelope" role="button" tabindex="0" aria-label="Open the letter">
+      <div class="paper"></div>
+      <div class="env-body"></div>
+      <div class="env-flap"></div>
+      <div class="seal">M</div>
+    </div>
+    <p class="tap-hint" id="tap-hint">tap the envelope to open</p>
+  </div>
+
+  <div class="letter-paper" id="letter-paper"></div>
+</section>
+
+<!-- ================= MEMORIES ================= -->
+<section id="memories">
+  <div class="headline">
+    <div class="eyebrow">a little archive</div>
+    <h2>Our Memories</h2>
+    <p>These are the moments that make our journey together special.</p>
+  </div>
+  <div class="gallery" id="gallery"></div>
+</section>
+
+<!-- ================= CHECK-IN ================= -->
+<section id="checkin">
+  <div class="headline">
+    <div class="eyebrow">gentle reminder</div>
+    <h2>How are you taking care of yourself today?</h2>
+  </div>
+  <div class="card checkin-card">
+    <div class="checklist" id="checklist">
+      <label><input type="checkbox" data-item="study"> 📚 I studied today.</label>
+      <label><input type="checkbox" data-item="water"> 💧 I drank water.</label>
+      <label><input type="checkbox" data-item="meals"> 🍽 I ate my meals.</label>
+      <label><input type="checkbox" data-item="rest"> 😴 I got some rest.</label>
+      <label><input type="checkbox" data-item="kind"> ❤️ I showed myself kindness.</label>
+    </div>
+    <p id="checkin-message">I'm proud of you. Don't forget to rest too. ❤️</p>
+  </div>
+</section>
+
+<!-- ================= CLOSING ================= -->
+<section id="closing" class="closing">
+  <div class="eyebrow">before you go</div>
+  <p>No matter how difficult nursing gets, I hope you always remember that you are never alone.</p>
+  <p>I'll always believe in you.</p>
+  <p>I'll always pray for you.</p>
+  <p>I'll always be cheering for you until the day I get to celebrate RN Velle Sammer F. Sapongay.</p>
+  <div class="sig">Love, Mishaal :p ❤️</div>
+  <div class="small-heart">made with love</div>
+</section>
+
+<script>
+/* ---------------- floating hearts ---------------- */
+(function(){
+  const container = document.getElementById('floaties');
+  const symbols = ['♥','✦','♡'];
+  const count = window.innerWidth < 600 ? 10 : 18;
+  for(let i=0;i<count;i++){
+    const el = document.createElement('span');
+    el.className = 'floaty';
+    el.textContent = symbols[Math.floor(Math.random()*symbols.length)];
+    const size = 10 + Math.random()*16;
+    el.style.fontSize = size+'px';
+    el.style.left = Math.random()*100+'vw';
+    el.style.animationDuration = (14 + Math.random()*14)+'s';
+    el.style.animationDelay = (Math.random()*16)+'s';
+    container.appendChild(el);
+  }
+})();
+
+/* ---------------- welcome rotator ---------------- */
+const rotatorMessages = [
+  "One page at a time.",
+  "One dream at a time.",
+  "Future RN.",
+  "I believe in you.",
+  "Keep going.",
+  "You've got this.",
+  "Chop wood. Carry water.",
+  "You are exactly where you're meant to be.",
+  "Velle-ive in yourself.",
+  ];
+let rotIndex = 0;
+const rotatorEl = document.getElementById('rotator-text');
+setInterval(() => {
+  rotIndex = (rotIndex + 1) % rotatorMessages.length;
+  rotatorEl.style.animation = 'none';
+  void rotatorEl.offsetWidth;
+  rotatorEl.textContent = rotatorMessages[rotIndex];
+  rotatorEl.style.animation = 'fadeSwap 4s ease-in-out infinite';
+}, 4000);
+
+/* ---------------- daily encouragement ---------------- */
+const messages = [
+  "Every page you study today brings you closer to your dream.",
+  "Future patients are lucky you're not giving up.",
+  "God is walking beside you.",
+  "You don't have to be perfect, just keep going.",
+  "Drink some water first.",
+  "I'm proud of you.",
+  "You are stronger than you realize.",
+  "One lecture today, one life changed tomorrow.",
+  "Chop wood. Carry water.",
+  "Rest if you need to, but don't give up.",
+  "You didn't come this far to only come this far.",
+  "Even the best nurses were once tired students who kept showing up.",
+  "Your notes today are someone's healing tomorrow.",
+  "It's okay to cry and still keep going. Both can be true.",
+  "You are not behind. You are exactly on time for your own story.",
+  "Take a deep breath. You've survived every hard day so far.",
+  "Small progress is still progress.",
+  "You don't need to understand everything today. Just today's part.",
+  "Someone out there needs the nurse you're becoming.",
+  "Your effort is not invisible, even when no one claps for it.",
+  "You are allowed to rest without feeling guilty.",
+  "Every return demonstration is practice for saving a life someday.",
+  "You are capable of more than your tired mind is telling you right now.",
+  "Trust the process, even the boring parts.",
+  "Your dedication is quietly inspiring.",
+  "One more page. Then rest.",
+  "You are building a future you'll be proud of.",
+  "It's okay if today was hard. Tomorrow gets another try.",
+  "You are not just memorizing, you're becoming someone's comfort someday.",
+  "Keep your eyes on RN Velle. She's closer than you think.",
+  "Your hands are learning to heal. That's sacred work.",
+  "You've handled hard semesters before. You'll handle this one too.",
+  "Take your vitamins and your dreams seriously.",
+  "I'm always proud of you.",
+  "You are loved, even on your most exhausted days.",
+  "Somewhere ahead, a patient is waiting for exactly your kind of care.",
+  "You are doing better than you think you are.",
+  "Even five minutes of rest counts. Take it.",
+  "You don't have to carry today's stress into tomorrow.",
+  "Your persistence is your superpower.",
+  "It's okay to ask for help. Even future nurses need care too.",
+  "You are not alone in this, not for one single page.",
+  "The fact that you care this much means you're already a good nurse.",
+  "Breathe. You are exactly where you need to be.",
+  "This exam is a moment, not your whole story.",
+  "You've got a heart made for this profession.",
+  "Keep showing up. That's most of the battle.",
+  "You are stronger on your hardest days than you know.",
+  "Your late nights are not wasted, they're building something.",
+  "One day you'll look back and be amazed at how far you came.",
+  "You are worthy of rest, softness, and grace.",
+  "Nursing school is hard because it's preparing you for something meaningful.",
+  "You've got this, one skill at a time.",
+  "Your kindness will make you unforgettable to your future patients.",
+  "It's okay to not have it all figured out yet.",
+  "You are learning to save lives. Be gentle with yourself while you learn.",
+  "This feeling of overwhelm is temporary. You are not.",
+  "Every flashcard is a step closer to RN.",
+  "You are someone's answered prayer, even if you don't know it yet.",
+  "Don't forget to eat something today.",
+  "You're allowed to take breaks without feeling like you're falling behind.",
+  "Someday, 'Velle Sammer F. Sapongay, RN' will be more than a dream. It will be your name.",
+  "Even your quiet effort is being noticed by God.",
+  "You are becoming someone your younger self would be proud of.",
+  "It's okay to feel small in front of a big dream. Keep walking toward it anyway.",
+  "You've survived a hundred percent of your hardest days so far.",
+  "The exhaustion is temporary. The purpose is forever.",
+  "You are not behind your classmates. You are on your own timeline.",
+  "Let today be enough, even if it wasn't perfect.",
+  "Your compassion is your competitive advantage.",
+  "You are more resilient than this semester is testing you to be.",
+  "Take your time. Nobody becomes RN overnight.",
+  "You are exactly the kind of nurse someone needs.",
+  "Your future patients will feel safe because of the effort you put in now.",
+  "You don't have to prove your worth through exhaustion.",
+  "Rest is productive too.",
+  "You are learning something today that will matter for the rest of your life.",
+  "I know today was heavy. I'm still proud of you.",
+  "You are closer to your white coat than your tired heart believes.",
+  "Every duty shift you complete is proof of your strength.",
+  "You are allowed to be a beginner and still be amazing.",
+  "Keep your dream loud, even when your energy is quiet.",
+  "You are not just studying nursing. You're becoming someone's hero.",
+  "Take a sip of water and a deep breath. You've got the next hour.",
+  "You are worth all the effort you're putting into this dream.",
+  "Someday your signature will end in R.N. Keep writing your story until then.",
+  "You are doing something hard and brave every single day.",
+  "It's okay to feel behind sometimes. Growth isn't always visible.",
+  "You are learning to care for others while learning to care for yourself. That's growth.",
+  "You're not just passing subjects, you're building a calling.",
+  "Even tired, you still show up. That's who you are.",
+  "You are more than capable of finishing what you started.",
+  "I hope you know how proud I already am of you.",
+  "Let this be a soft reminder: you are doing enough.",
+  "You are learning the kind of patience that will make you an amazing nurse.",
+  "Even on your worst study day, you're still moving forward.",
+  "You are not alone. I'm always cheering for you.",
+  "This chapter is hard, but it's not the whole book.",
+  "You are someone's future safe place, even if you haven't met them yet.",
+  "Believe in yourself the way I believe in you.",
+  "You've got a whole future waiting on the other side of this tiredness.",
+  "One duty at a time. One dream at a time. One Velle at a time.",
+  "Someday you'll wear RN beside your name, and I'll be the loudest one cheering.",
+  "Seek progress, Not perfection.",
+  "You are not defined by your mistakes, but by your resilience.",
+  "You are stronger than you think you are.",
+  "You are capable of achieving great things.",
+  "You are worthy of love and respect.",
+  "You are enough, just as you are.",
+  "Velle-ive in yourself, even when the path seems uncertain.",
+  ];
+let lastMsgIndex = -1;
+const encourageEl = document.getElementById('encourage-text');
+function pickMessage(){
+  let i;
+  do{ i = Math.floor(Math.random()*messages.length); } while(i === lastMsgIndex && messages.length > 1);
+  lastMsgIndex = i;
+  return messages[i];
+}
+document.getElementById('encourage-btn').addEventListener('click', () => {
+  encourageEl.style.opacity = 0;
+  setTimeout(() => {
+    encourageEl.textContent = pickMessage();
+    encourageEl.style.opacity = 1;
+  }, 250);
+});
+
+/* ---------------- bible verse ---------------- */
+const verses = [
+  {
+    ref: "Jeremiah 29:11",
+    text: "\"For I know the plans I have for you,\" declares the Lord, \"plans to prosper you and not to harm you, plans to give you hope and a future.\"",
+    reflection: "Nursing school can make the future feel uncertain, but you were never meant to carry that uncertainty alone. There is a plan for you, even on the days it's hard to see it. Every skill you're learning now is quietly shaping the compassionate nurse you're becoming."
+  },
+  {
+    ref: "Isaiah 41:10",
+    text: "\"So do not fear, for I am with you; do not be dismayed, for I am your God. I will strengthen you and help you.\"",
+    reflection: "On the days your hands shake before a return demonstration or your mind goes blank during an exam, this is your reminder that you're not facing it with only your own strength. You're being held up, one trembling step at a time."
+  },
+  {
+    ref: "Joshua 1:9",
+    text: "\"Have I not commanded you? Be strong and courageous. Do not be afraid; do not be discouraged, for the Lord your God will be with you wherever you go.\"",
+    reflection: "Courage doesn't mean you're never scared, it means you keep walking into the hospital, the classroom, the exam room, even while your heart is pounding. That kind of bravery is exactly what makes a good nurse."
+  },
+  {
+    ref: "Philippians 4:13",
+    text: "\"I can do all this through him who gives me strength.\"",
+    reflection: "You don't have to manufacture your own endurance from nothing. On the mornings you don't feel ready, borrow strength from the One who never runs out of it, and keep going anyway."
+  },
+  {
+    ref: "Proverbs 3:5–6",
+    text: "\"Trust in the Lord with all your heart and lean not on your own understanding; in all your ways submit to him, and he will make your paths straight.\"",
+    reflection: "You won't always understand why a semester is this hard, or why some lessons take longer to click. You don't have to. You only have to keep trusting the One who already sees the nurse you're becoming."
+  },
+  {
+    ref: "Romans 8:28",
+    text: "\"And we know that in all things God works for the good of those who love him, who have been called according to his purpose.\"",
+    reflection: "Even the exhausting clinical days, the failed quizzes, the moments of self-doubt, none of it is wasted. It's all quietly being woven into the story of the nurse, and the person, you're becoming."
+  }
+];
+let lastVerseIndex = 0;
+function pickVerse(){
+  let i;
+  do{ i = Math.floor(Math.random()*verses.length); } while(i === lastVerseIndex && verses.length > 1);
+  lastVerseIndex = i;
+  return verses[i];
+}
+document.getElementById('verse-btn').addEventListener('click', () => {
+  const v = pickVerse();
+  const refEl = document.getElementById('verse-ref');
+  const textEl = document.getElementById('verse-text');
+  const reflEl = document.getElementById('verse-reflection');
+  [refEl, textEl, reflEl].forEach(el => el.style.opacity = 0);
+  setTimeout(() => {
+    refEl.textContent = v.ref;
+    textEl.textContent = v.text;
+    reflEl.textContent = v.reflection;
+    [refEl, textEl, reflEl].forEach(el => el.style.opacity = 1);
+  }, 250);
+});
+
+/* ---------------- letter ---------------- */
+const letterParagraphs = [
+  "Dear Velle,",
+  "I know nursing is one of the hardest courses.",
+  "There will be days when you feel overwhelmed.",
+  "There will be days when you question yourself.",
+  "There will be days when you feel exhausted before the day even starts.",
+  "But I hope you never forget why you started.",
+  "One day, someone will still be alive because of the knowledge you're learning today.",
+  "One day, someone will smile because you cared for them.",
+  "That future nurse is already growing within you.",
+  "Whenever you feel unmotivated, remember that I believe in you, even on the days when you doubt yourself.",
+  "And whenever your heart feels heavy, remember to pray and surrender all your worries to God.",
+  "Trust in His timing, His plans, and His guidance.",
+  "He will give you the strength and wisdom you need, one step at a time.",
+  "I'm proud of every page you read, every challenge you overcome, every sacrifice you make, and every dream you continue to pursue.",
+  "Don't skip your meals.",
+  "Get enough sleep whenever you can.",
+  "And don't be too hard on yourself.",
+  "You're doing better than you think.",
+  "I will always be one of your biggest supporters.",
+  "I can't wait for us to graduate and earn our degrees, even if you reach that milestone before I do.",
+  "When it's finally time for you to take the PNLE, I know you'll give it everything you've got.",
+  "I can't wait to see RN beside your name one day.",
+  "When that day comes, I'll probably be the one applauding the loudest.",
+  "Until then, remember:",
+  "Every lecture.",
+  "Every quiz.",
+  "Every return demonstration.",
+  "Every duty.",
+  "Every late-night review.",
+  "Every sacrifice.",
+  "They all matter.",
+  "Keep showing up.",
+  "Keep believing.",
+  "And if it's ever hard to believe in yourself, borrow some of my belief in you until you can believe again.",
+  "I'll always be praying for you.",
+  "I'll always be proud of you.",
+  "And I'll always love you."
+];
+
+const envelope = document.getElementById('envelope');
+const letterPaper = document.getElementById('letter-paper');
+const tapHint = document.getElementById('tap-hint');
+let letterOpened = false;
+
+function openLetter(){
+  if(letterOpened) return;
+  letterOpened = true;
+  envelope.classList.add('open');
+  tapHint.textContent = "reading...";
+
+  setTimeout(() => {
+    letterPaper.innerHTML = '';
+    letterParagraphs.forEach(p => {
+      const line = document.createElement('p');
+      line.className = 'letter-line';
+      line.textContent = p;
+      letterPaper.appendChild(line);
+    });
+    const sig = document.createElement('p');
+    sig.className = 'letter-line letter-sig';
+    sig.textContent = "Love, Mishaal ❤️";
+    letterPaper.appendChild(sig);
+
+    letterPaper.classList.add('visible');
+    letterPaper.scrollIntoView({ behavior: 'smooth', block: 'nearest' });
+
+    const lines = letterPaper.querySelectorAll('.letter-line');
+    lines.forEach((line, i) => {
+      setTimeout(() => line.classList.add('show'), i * 180);
+    });
+    tapHint.textContent = "";
+  }, 750);
+}
+envelope.addEventListener('click', openLetter);
+envelope.addEventListener('keydown', (e) => {
+  if(e.key === 'Enter' || e.key === ' '){ e.preventDefault(); openLetter(); }
+});
+
+/* ---------------- memories gallery ---------------- */
+const memories = [
+  { img: 'images/one_of_my_favorite_memories.jpeg', caption: 'One of my favorite memories.' },
+  { img: 'images/my_future_rn.jpeg', caption: 'My future RN.' },
+  { img: 'images/one_step_closer.jpeg', caption: 'One step closer.' },
+  { img: 'images/you_looked_so_happy_here.jpeg', caption: 'You looked so happy here.' },
+  { img: 'images/i_love_this_smilee.jpeg', caption: 'I love this smile.' },
+  { img: 'images/this_one_is_just_for_us.jpeg', caption: 'This one is just for us.' }
+];
+const gallery = document.getElementById('gallery');
+memories.forEach((m, i) => {
+  const tilt = (i % 2 === 0 ? -1 : 1) * (2 + Math.random()*3);
+  const card = document.createElement('div');
+  card.className = 'polaroid';
+  card.style.setProperty('--tilt', tilt + 'deg');
+  card.innerHTML = `<div class="thumb"><img src="${m.img}" alt="${m.caption}" loading="lazy"></div><div class="caption">${m.caption}</div>`;
+  card.addEventListener('click', () => card.classList.toggle('tapped'));
+  gallery.appendChild(card);
+});
+
+/* ---------------- gentle check-in ---------------- */
+const checklist = document.getElementById('checklist');
+const checkinMessage = document.getElementById('checkin-message');
+checklist.addEventListener('change', () => {
+  const boxes = checklist.querySelectorAll('input[type="checkbox"]');
+  const all = Array.from(boxes).every(b => b.checked);
+  checkinMessage.classList.toggle('show', all);
+});
+
+/* ---------------- nav dots ---------------- */
+const dotLinks = document.querySelectorAll('#dots a');
+const sections = Array.from(dotLinks).map(a => document.querySelector(a.getAttribute('href')));
+function updateDots(){
+  let current = 0;
+  sections.forEach((sec, i) => {
+    if(sec && sec.getBoundingClientRect().top <= window.innerHeight * 0.4) current = i;
+  });
+  dotLinks.forEach((a, i) => a.classList.toggle('active', i === current));
+}
+window.addEventListener('scroll', updateDots, { passive: true });
+updateDots();
+</script>
+</body>
+</html>
